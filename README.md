@@ -10,7 +10,7 @@
 
 # PozitronDev DIConfiguration
 
-Nuget package providing extension methods to `IServiceCollection`, .NET Core's built-in DI infrastructure. The extensions provide the ability for dynamic/runtime DI configuration, through external config files.
+Nuget package providing extension methods to `IServiceCollection` (.NET Core's built-in DI infrastructure). The extensions provide the ability for dynamic/runtime DI configuration, through external config files.
 
 ## Usage
 
@@ -45,9 +45,13 @@ Example configuration:
 }
 ```
 
-The services and implementation should be provided as fully qualified type names. The scope options are `scoped`, `transient`, and `singleton`.
+The services and implementations should be provided as fully qualified type names, e.g. "Namespace.Type, AssemblyName".
 
-The configuration is being registers through the `AddBindings` extension method to `IServiceCollection`.
+The generic types can be provided through the standard notation, by adding \`n suffix, where `n` is the number of generic paremeters (refer to the above example).
+
+The scope options are `scoped`, `transient`, and `singleton`.
+
+The configuration is being registered through the `AddBindings` extension method to `IServiceCollection`.
 
 Example usage:
 
@@ -72,6 +76,25 @@ class Program
             var genericService = scope.ServiceProvider.GetRequiredService<IGenericService<Object>>();
             Console.WriteLine(genericService.GetMessage());
         }
+    }
+}
+```
+
+Example ASP.NET Core usage:
+
+```
+public class Startup
+{
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddBindings(Configuration);
     }
 }
 ```
