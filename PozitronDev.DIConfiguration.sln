@@ -5,11 +5,17 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PozitronDev.DIConfiguration", "src\PozitronDev.DIConfiguration\PozitronDev.DIConfiguration.csproj", "{37DB62C7-2B88-431E-B2A9-A74572DA553D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "sample\SampleApp\SampleApp.csproj", "{98A6C6CC-E27F-4CEC-ACD4-3A6F7B13D6A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "sample\SampleApp\SampleApp.csproj", "{98A6C6CC-E27F-4CEC-ACD4-3A6F7B13D6A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLibrary", "sample\SampleLibrary\SampleLibrary.csproj", "{ECE564AE-B078-4B10-8617-C365689D10B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleLibrary", "sample\SampleLibrary\SampleLibrary.csproj", "{ECE564AE-B078-4B10-8617-C365689D10B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{DABCF79F-EFAB-445D-968C-C9819807A697}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A9D6C03-85FB-4113-B917-E5D05E4C2609}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
