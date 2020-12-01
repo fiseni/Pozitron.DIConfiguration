@@ -18,7 +18,7 @@ In order to simplify the usage, all bindings can be provided in the default conf
 
 Example configuration:
 
-```
+```json
 {
   "Logging": {
     "IncludeScopes": true,
@@ -55,7 +55,7 @@ The configuration is being registered through the `AddBindings` extension method
 
 Example usage:
 
-```
+```c#
 class Program
 {
     static void Main(string[] args)
@@ -82,7 +82,7 @@ class Program
 
 Example ASP.NET Core usage:
 
-```
+```c#
 public class Startup
 {
     public IConfiguration Configuration { get; }
