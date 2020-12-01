@@ -14,12 +14,12 @@ namespace PozitronDev.DIConfiguration
 
             foreach (var section in bindingSection.GetChildren())
             {
-                bindingDefinitions.Add(new BindingDefinition()
-                {
-                    ServiceType = Type.GetType(section.GetSection("service").Value, true),
-                    ImplementationType = Type.GetType(section.GetSection("implementation").Value, true),
-                    Scope = BindingScopeMapper.GetScope(section.GetSection("scope").Value)
-                });
+                bindingDefinitions.Add(new BindingDefinition
+                (
+                    serviceType: Type.GetType(section.GetSection("service").Value, true),
+                    implementationType: Type.GetType(section.GetSection("implementation").Value, true),
+                    scope: BindingScopeMapper.GetScope(section.GetSection("scope").Value)
+                ));
             }
 
             return bindingDefinitions;

@@ -6,8 +6,15 @@ namespace PozitronDev.DIConfiguration
 {
     public class BindingDefinition
     {
-        public Type ServiceType { get; set; }
-        public Type ImplementationType { get; set; }
-        public BindingScope Scope { get; set; }
+        public Type ServiceType { get; }
+        public Type ImplementationType { get; }
+        public BindingScope Scope { get; }
+
+        public BindingDefinition(Type serviceType, Type implementationType, BindingScope scope)
+        {
+            this.ServiceType = serviceType;
+            this.ImplementationType = implementationType;
+            this.Scope = scope;
+        }
     }
 }
