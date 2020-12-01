@@ -8,12 +8,12 @@ namespace PozitronDev.DIConfiguration
 {
     public static class ServiceCollectionServiceExtensions
     {
-        public static void AddConfigurationBindings(this IServiceCollection services, IConfiguration configuration)
+        public static void AddBindings(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddConfigurationBindings(new BindingResolver().GetDefinitions(configuration));
+            services.AddBindings(new BindingResolver().GetDefinitions(configuration));
         }
 
-        public static void AddConfigurationBindings(this IServiceCollection services, IEnumerable<BindingDefinition> bindingDefinitions)
+        public static void AddBindings(this IServiceCollection services, IEnumerable<BindingDefinition> bindingDefinitions)
         {
             foreach (var definition in bindingDefinitions)
             {
