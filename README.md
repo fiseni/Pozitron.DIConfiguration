@@ -1,5 +1,13 @@
 <img align="left" src="pozitronlogo.png" width="120" height="120">
 
+&nbsp; [![NuGet](https://img.shields.io/nuget/v/PozitronDev.DIConfiguration.svg)](https://www.nuget.org/packages/PozitronDev.DIConfiguration)[![NuGet](https://img.shields.io/nuget/dt/PozitronDev.DIConfiguration.svg)](https://www.nuget.org/packages/PozitronDev.DIConfiguration)
+
+&nbsp; [![Build Status](https://dev.azure.com/pozitrondev/PozitronDev.DIConfiguration/_apis/build/status/DIConfiguration_BuildPackage?branchName=master)](https://dev.azure.com/pozitrondev/PozitronDev.DIConfiguration/_build/latest?definitionId=13&branchName=master)
+
+&nbsp; [![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/pozitrondev/PozitronDev.DIConfiguration/13)](https://dev.azure.com/pozitrondev/PozitronDev.DIConfiguration/_build/latest?definitionId=13&branchName=master&view=codecoverage-tab)
+
+&nbsp;
+
 # PozitronDev DIConfiguration
 
 Nuget package providing extension methods to `IServiceCollection`, .NET Core's built-in DI infrastructure. The extensions provide the ability for dynamic/runtime DI configuration, through external config files.
