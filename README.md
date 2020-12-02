@@ -12,6 +12,10 @@
 
 Nuget package providing extension methods to `IServiceCollection` (.NET Core's built-in DI infrastructure). The extensions provide the ability for dynamic/runtime DI configuration, through external config files.
 
+I described the motivation and the use cases in the following blog post.
+
+https://fiseni.com/posts/open-close-principle-and-runtime-di-configuration/
+
 ## Usage
 
 In order to simplify the usage, all bindings can be provided in the default configuration file "appsetting.json", within `Bindings` section. A sample console application can be found under `sample` folder within this repository.
